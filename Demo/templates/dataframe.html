@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% set links=[
+    {'label':'home','href':url_for('.index')},
+
+]%}
+
+{% block body %}
+
+<nav>
+    {% for link in links %}
+        <a href="{{ link.href }}">{{ link.label }}</a>
+    {% endfor %}
+</nav>
+
+{% endblock %}

@@ -1,5 +1,18 @@
 {% extends "layout.html" %}
+
+{% set links=[
+    {'label':'home','href':url_for('.index')},
+    {'label':'data','href':url_for('.data')},
+    <!--{'label':'plot','href':url_for('.data')},-->
+]%}
+
 {% block body %}
+<nav>
+    {% for link in links %}
+        <a href="{{ link.href }}">{{ link.label }}</a><br>
+    {% endfor %}
+</nav>
+
 <p>The table has {{ length }} rows.</p>
 {{ dataframe|safe }}
 {% endblock %}
