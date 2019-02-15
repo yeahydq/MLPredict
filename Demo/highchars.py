@@ -18,3 +18,4 @@ if __name__ == "__main__":
 
 
 # http://songhuiming.github.io/pages/2016/08/18/highcharts-in-python-flask/
+# https://www.hcharts.cn/docs/basic-compose
